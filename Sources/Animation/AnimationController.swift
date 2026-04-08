@@ -1,26 +1,25 @@
 import Foundation
-import Combine
 
 enum AnimationPreset: String, CaseIterable, Identifiable {
-    case particles = "particles"
-    case aurora = "aurora"
-    case nebula = "nebula"
-    case wave = "wave"
+    case fluid  = "fluid"
+    case smoke  = "smoke"
+    case flow   = "flow"
+    case lava   = "lava"
 
     var id: String { rawValue }
 
     var displayName: String {
         switch self {
-        case .particles: return "✦  Particles"
-        case .aurora:    return "〜  Aurora"
-        case .nebula:    return "◉  Nebula"
-        case .wave:      return "≋  Wave"
+        case .fluid: return "〰  Fluid"
+        case .smoke: return "◌  Smoke"
+        case .flow:  return "∿  Flow"
+        case .lava:  return "●  Lava"
         }
     }
 }
 
 class AnimationController: ObservableObject {
-    @Published var currentPreset: AnimationPreset = .particles
+    @Published var currentPreset: AnimationPreset = .fluid
     @Published var speed: Double = 1.0
     @Published var isRunning: Bool = true
 
