@@ -10,6 +10,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
         setupMenuBar()
         setupWallpaperWindows()
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(screenParametersDidChange),
+            name: NSApplication.didChangeScreenParametersNotification,
+            object: nil
+        )
+    }
+
+    @objc func screenParametersDidChange(_ notification: Notification) {
+        for window in wallpaperWindows {
+            window.close()
+        }
+        setupWallpaperWindows()
     }
 
     // MARK: - MenuBar
