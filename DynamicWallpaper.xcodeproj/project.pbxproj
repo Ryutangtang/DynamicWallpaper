@@ -16,11 +16,11 @@
 
 /* Begin PBXFileReference section */
 		DA7F8A9B1234567890ABC00E /* DynamicWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA7F8A9B1234567890ABC010 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = SOURCE_ROOT; };
-		DA7F8A9B1234567890ABC011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWallpaperApp.swift; sourceTree = SOURCE_ROOT; };
-		DA7F8A9B1234567890ABC013 /* MetalAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalAnimationView.swift; sourceTree = SOURCE_ROOT; };
-		DA7F8A9B1234567890ABC014 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = SOURCE_ROOT; };
+		DA7F8A9B1234567890ABC010 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		DA7F8A9B1234567890ABC011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWallpaperApp.swift; sourceTree = "<group>"; };
+		DA7F8A9B1234567890ABC013 /* MetalAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalAnimationView.swift; sourceTree = "<group>"; };
+		DA7F8A9B1234567890ABC014 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -38,7 +38,8 @@
 		DA7F8A9B1234567890ABC001 /* MainGroup */ = {
 			isa = PBXGroup;
 			children = (
-				DA7F8A9B1234567890ABC003 /* DynamicWallpaper */,
+				DA7F8A9B1234567890ABC030 /* Sources */,
+				DA7F8A9B1234567890ABC015 /* Info.plist */,
 				DA7F8A9B1234567890ABC002 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,17 +52,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA7F8A9B1234567890ABC003 /* DynamicWallpaper */ = {
+		DA7F8A9B1234567890ABC030 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F8A9B1234567890ABC031 /* App */,
+				DA7F8A9B1234567890ABC032 /* Animation */,
+				DA7F8A9B1234567890ABC033 /* Metal */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		DA7F8A9B1234567890ABC031 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */,
 				DA7F8A9B1234567890ABC011 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA7F8A9B1234567890ABC032 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
 				DA7F8A9B1234567890ABC010 /* AnimationController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		DA7F8A9B1234567890ABC033 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
 				DA7F8A9B1234567890ABC013 /* MetalAnimationView.swift */,
 				DA7F8A9B1234567890ABC014 /* Shaders.metal */,
-				DA7F8A9B1234567890ABC015 /* Info.plist */,
 			);
-			name = DynamicWallpaper;
+			path = Metal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7F8A9B1234567890ABC020 /* AnimationController.swift in Sources */,
-				DA7F8A9B1234567890ABC021 /* AppDelegate.swift in Sources */,
 				DA7F8A9B1234567890ABC022 /* DynamicWallpaperApp.swift in Sources */,
+				DA7F8A9B1234567890ABC021 /* AppDelegate.swift in Sources */,
+				DA7F8A9B1234567890ABC020 /* AnimationController.swift in Sources */,
 				DA7F8A9B1234567890ABC023 /* MetalAnimationView.swift in Sources */,
 				DA7F8A9B1234567890ABC024 /* Shaders.metal in Sources */,
 			);
