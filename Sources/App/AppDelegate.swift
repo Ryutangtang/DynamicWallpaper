@@ -5,6 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
     var wallpaperWindows: [NSWindow] = []
     var animationController = AnimationController()
+    private var settingsPanel: NSPanel?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
@@ -141,7 +142,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Actions
 
     @objc func openSettings() {
-        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+        if settingsPanel == nil {
+            let hosting = NSHostingController(rootView: SettingsView(controller: animationController))
+            let panel = NSPanel(
+                contentRect: .zero,
+                styleMask: [.titled, .closable, .fullSizeContentView, .nonactivatingPanel],
+                backing: .buffered,
+                defer: false
+            )
+            panel.title = "DynamicWallpaper"
+            panel.contentViewController = hosting
+            panel.isReleasedWhenClosed = false
+            panel.level = .floating
+            panel.hidesOnDeactivate = false
+            panel.center()
+            settingsPanel = panel
+        }
+        settingsPanel?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
 
