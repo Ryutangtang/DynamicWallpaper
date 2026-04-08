@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7F8A9B1234567890ABC040 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F8A9B1234567890ABC041 /* SettingsView.swift */; };
 		DA7F8A9B1234567890ABC020 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F8A9B1234567890ABC010 /* AnimationController.swift */; };
 		DA7F8A9B1234567890ABC021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F8A9B1234567890ABC011 /* AppDelegate.swift */; };
 		DA7F8A9B1234567890ABC022 /* DynamicWallpaperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */; };
@@ -19,6 +20,7 @@
 		DA7F8A9B1234567890ABC010 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWallpaperApp.swift; sourceTree = "<group>"; };
+		DA7F8A9B1234567890ABC041 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC013 /* MetalAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalAnimationView.swift; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC014 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DA7F8A9B1234567890ABC015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -67,6 +69,7 @@
 			children = (
 				DA7F8A9B1234567890ABC012 /* DynamicWallpaperApp.swift */,
 				DA7F8A9B1234567890ABC011 /* AppDelegate.swift */,
+				DA7F8A9B1234567890ABC041 /* SettingsView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				DA7F8A9B1234567890ABC022 /* DynamicWallpaperApp.swift in Sources */,
 				DA7F8A9B1234567890ABC021 /* AppDelegate.swift in Sources */,
+				DA7F8A9B1234567890ABC040 /* SettingsView.swift in Sources */,
 				DA7F8A9B1234567890ABC020 /* AnimationController.swift in Sources */,
 				DA7F8A9B1234567890ABC023 /* MetalAnimationView.swift in Sources */,
 				DA7F8A9B1234567890ABC024 /* Shaders.metal in Sources */,

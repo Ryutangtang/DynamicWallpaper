@@ -88,6 +88,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(.separator())
 
+        let settingsItem = NSMenuItem(title: "Settings…", action: #selector(openSettings), keyEquivalent: ",")
+        settingsItem.target = self
+        menu.addItem(settingsItem)
+
+        menu.addItem(.separator())
+
         let quitItem = NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         menu.addItem(quitItem)
 
@@ -133,6 +139,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     // MARK: - Actions
+
+    @objc func openSettings() {
+        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
 
     @objc func selectPreset(_ sender: NSMenuItem) {
         guard let preset = sender.representedObject as? AnimationPreset else { return }
